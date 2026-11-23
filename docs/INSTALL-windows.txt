@@ -1,0 +1,18 @@
+FOHstick – Windows 10 / 11
+(c) 2026 fristik.eu · apps@fristik.eu · https://fristik.eu
+
+EN
+1. Extract this folder to a permanent place, e.g. C:\FOHstick\
+2. Run FOHstick.exe
+   (SmartScreen on first start: "More info" -> "Run anyway")
+3. A FOHstick shortcut is created on the desktop and in the Start menu.
+4. Administrator approval (UAC) is requested only when formatting a USB drive.
+If your antivirus blocks FOHstick.exe, use "FOHstick (alternative).cmd".
+
+SK
+1. Rozbaľ tento priečinok na trvalé miesto, napr. C:\FOHstick\
+2. Spusti FOHstick.exe
+   (SmartScreen pri prvom spustení: "Ďalšie informácie" -> "Spustiť aj tak")
+3. Na ploche a v ponuke Štart sa vytvorí zástupca FOHstick.
+4. Práva správcu (UAC) si apka vypýta iba pri formátovaní USB.
+Ak antivírus blokuje FOHstick.exe, použi "FOHstick (alternative).cmd".

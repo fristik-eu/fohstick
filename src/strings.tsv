@@ -1,0 +1,101 @@
+key	sk	en
+subtitle	audio → WAV  ·  USB pre mixpult	audio → WAV  ·  USB for mixing consoles
+tab_conv	Convert	Convert
+tab_fmt	Format	Format
+lang	Jazyk	Language
+theme_auto	Auto	Auto
+theme_light	Svetlý	Light
+theme_dark	Tmavý	Dark
+update_avail	⬆ Nová verzia %1 – stiahnuť	⬆ New version %1 – download
+card_files	Súbory	Files
+files_hint_mac	MP3, WAV, FLAC, AIFF, AAC/M4A – pridaj tlačidlom alebo pretiahni na ikonu apky	MP3, WAV, FLAC, AIFF, AAC/M4A – add with the button or drop onto the app icon
+files_hint_win	MP3, WAV, FLAC, AIFF, AAC/M4A – pridaj tlačidlom alebo pretiahni sem	MP3, WAV, FLAC, AIFF, AAC/M4A – add with the button or drop here
+files_empty	(zatiaľ žiadne súbory)	(no files yet)
+btn_add	Pridať súbory…	Add files…
+btn_remove	Odobrať vybrané	Remove selected
+btn_clear	Vymazať zoznam	Clear list
+card_output	Výstup	Output
+channels	Kanály:	Channels:
+mono	Mono	Mono
+stereo	Stereo	Stereo
+bitdepth	Bitová hĺbka:	Bit depth:
+rate	Vzorkovanie:	Sample rate:
+out_hint	WAV sa uloží vedľa originálu s príponou _44k1 / _48k / _96k	WAV is saved next to the original with suffix _44k1 / _48k / _96k
+btn_convert	Konvertovať	Convert
+files_count	%1 súbor(ov) v zozname	%1 file(s) in the list
+add_first	Najprv pridaj súbory.	Add some files first.
+converting	Prevádzam %1 / %2…	Converting %1 / %2…
+conv_done	Hotovo ✓  %1 OK	Done ✓  %1 OK
+conv_failed_n	, %1 sa nepodarilo	, %1 failed
+conv_failed_list	Tieto súbory sa nepodarilo previesť:	These files could not be converted:
+choose_audio	Vyber audio súbory (MP3, WAV, FLAC, AIFF, AAC/M4A)	Choose audio files (MP3, WAV, FLAC, AIFF, AAC/M4A)
+all_files	Všetky súbory	All files
+card_usb	USB disk	USB drive
+usb_intro	Naformátuje USB podľa požiadaviek pultu alebo podľa tvojho nastavenia.	Formats a USB drive to your console's requirements or to your own settings.
+btn_refresh	Obnoviť	Refresh
+no_name	bez názvu	no name
+no_usb	Žiadne externé USB – pripoj ho	No external USB – plug one in
+card_settings	Nastavenie	Settings
+mode	Režim:	Mode:
+mode_preset	Podľa pultu	By console
+mode_custom	Vlastný formát	Custom format
+console	Pult:	Console:
+filesystem	Systém:	File system:
+cluster	Cluster:	Cluster:
+cl_default	Predvolený	Default
+cl_32	32 KB (Allen & Heath)	32 KB (Allen & Heath)
+size	Veľkosť:	Size:
+sz_whole	Celý disk	Whole disk
+sz_32	Oddiel max. 32 GB	Partition max. 32 GB
+sz_16	Oddiel max. 16 GB	Partition max. 16 GB
+sz_2	Oddiel max. 2 GB	Partition max. 2 GB
+custom_cluster	 · cluster 	 · cluster
+custom_fat16	. FAT16 zvládne max. 2 GB – väčší disk dostane 2 GB oddiel.	. FAT16 handles max. 2 GB – larger disks get a 2 GB partition.
+custom_exfat	. Nastavenie clustra sa pri exFAT nepoužije.	. The cluster setting is not used for exFAT.
+disk_name	Názov disku:	Drive name:
+name_hint	max. 11 znakov, A–Z, 0–9	max. 11 characters, A–Z, 0–9
+btn_format	Naformátovať USB	Format USB
+warn_mac	Pozor: formátovanie vymaže všetky dáta na zvolenom USB. Zobrazujú sa iba externé disky.	Warning: formatting erases all data on the selected USB. Only external drives are listed.
+warn_win	Pozor: formátovanie vymaže všetky dáta na zvolenom USB. Zobrazujú sa iba externé USB disky. Práva správcu si apka vypýta až pri formátovaní.	Warning: formatting erases all data on the selected USB. Only external USB drives are listed. Administrator rights are requested only when formatting.
+disks_found	Nájdené externé disky: %1	External drives found: %1
+only_external	Zobrazujú sa iba externé disky, systémový disk tu nikdy nebude.	Only external drives are listed – the system drive never appears here.
+disk_list_fail	Zoznam diskov sa nepodarilo načítať: %1	Could not load the drive list: %1
+wait_pw	Čakám na heslo…	Waiting for password…
+wait_uac	Čakám na potvrdenie práv správcu…	Waiting for administrator approval…
+pw_prompt	FOHstick potrebuje heslo na naformátovanie USB disku.	FOHstick needs your password to format the USB drive.
+step_line	Krok %1 / 4: %2…  nevyťahuj USB.	Step %1 / 4: %2…  do not unplug the USB.
+st_check	Kontrolujem disk	Checking drive
+st_unmount	Odpájam disk	Unmounting drive
+st_erase	Mažem disk	Erasing drive
+st_partition	Vytváram oddiel	Creating partition
+st_fmt	Formátujem %1	Formatting %1
+st_cluster	Nastavujem cluster %1 KB	Setting %1 KB cluster
+st_finish	Dokončujem	Finishing
+st_mount	Pripájam disk	Mounting drive
+st_verify	Kontrolujem výsledok	Verifying result
+confirm_title	Naozaj vymazať celý disk?	Really erase the whole drive?
+confirm_disk	Disk: 	Drive:
+confirm_format	Formát: 	Format:
+confirm_name	Nový názov: 	New name:
+confirm_warn	VŠETKY dáta na tomto disku budú nenávratne vymazané.	ALL data on this drive will be permanently erased.
+confirm_continue	Pokračovať?	Continue?
+btn_cancel	Zrušiť	Cancel
+btn_erase	Vymazať a naformátovať	Erase and format
+done_title	Hotovo ✓	Done ✓
+done_text	USB je naformátované: %1.	USB formatted: %1.
+custom_what	vlastný formát (%1)	custom format (%1)
+custom_tip	USB je pripravené.	USB is ready.
+fail_title	Formátovanie zlyhalo	Formatting failed
+not_started	Formátovanie sa nespustilo	Formatting did not start
+cancelled	Zrušené.	Cancelled.
+cancelled_uac	Zrušené – bez práv správcu sa USB naformátovať nedá.	Cancelled – the USB cannot be formatted without administrator rights.
+err_timeout	Formátovanie trvá príliš dlho (viac ako 15 minút).	Formatting takes too long (more than 15 minutes).
+err_noresult	Formátovanie skončilo bez výsledku.	Formatting ended without a result.
+err_bad_disk	Neplatný disk.	Invalid drive.
+err_not_external	Disk nie je externý – z bezpečnostných dôvodov ho neformátujem.	The drive is not external – it will not be formatted for safety reasons.
+err_system	Toto je systémový disk – neformátujem.	This is the system drive – it will not be formatted.
+err_fat32_2tb	FAT32 (MBR) zvládne najviac 2 TB. Zvoľ exFAT alebo menší oddiel.	FAT32 (MBR) supports at most 2 TB. Choose exFAT or a smaller partition.
+err_ah_min	Allen & Heath potrebuje disk aspoň 2 GB.	Allen & Heath requires a drive of at least 2 GB.
+err_fs	Neznámy súborový systém.	Unknown file system.
+err_no_letter	Disku sa nepodarilo priradiť písmeno jednotky.	Could not assign a drive letter.
+err_cmd	Systémová chyba: %1	System error: %1

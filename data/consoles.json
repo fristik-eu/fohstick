@@ -1,0 +1,149 @@
+{
+  "schema": 1,
+  "updated": "2026-11-23",
+  "consoles": [
+    {
+      "name": "Yamaha DM3 / DM5 / DM7",
+      "fs": "AUTOX",
+      "cluster": 0,
+      "max": 0,
+      "label": "DM",
+      "desc_sk": "FAT32 · MBR · celý disk (súbor max. 4 GB). Disk nad 2 TB dostane exFAT (DM3 firmvér V2+, DM7 V1.5+).",
+      "desc_en": "FAT32 · MBR · whole disk (max. 4 GB per file). Disks over 2 TB get exFAT (DM3 firmware V2+, DM7 V1.5+).",
+      "tip_sk": "USB je pripravené pre Yamaha DM.",
+      "tip_en": "USB is ready for Yamaha DM."
+    },
+    {
+      "name": "Yamaha CL / QL",
+      "fs": "AUTO16",
+      "cluster": 0,
+      "max": 32000000000,
+      "label": "CLQL",
+      "desc_sk": "FAT32 · MBR · oddiel max. 32 GB (Yamaha podporuje USB do 32 GB). Kľúč do 2 GB dostane FAT16.",
+      "desc_en": "FAT32 · MBR · partition max. 32 GB (Yamaha supports USB up to 32 GB). Sticks up to 2 GB get FAT16.",
+      "tip_sk": "USB je pripravené pre CL / QL.",
+      "tip_en": "USB is ready for CL / QL."
+    },
+    {
+      "name": "Yamaha LS9",
+      "fs": "AUTO16",
+      "cluster": 0,
+      "max": 16000000000,
+      "label": "LS9",
+      "desc_sk": "FAT32 · MBR · oddiel max. 16 GB (Yamaha overila do 16 GB). Kľúč do 2 GB dostane FAT16. LS9 nepodporuje dlhé názvy súborov.",
+      "desc_en": "FAT32 · MBR · partition max. 16 GB (Yamaha verified up to 16 GB). Sticks up to 2 GB get FAT16. LS9 does not support long file names.",
+      "tip_sk": "USB je pripravené pre LS9.",
+      "tip_en": "USB is ready for LS9."
+    },
+    {
+      "name": "Yamaha TF",
+      "fs": "FAT32",
+      "cluster": 0,
+      "max": 0,
+      "label": "TF",
+      "desc_sk": "FAT32 · MBR · celý disk, max. 2 TB, sektor 512 B (požiadavka Yamahy na nahrávanie).",
+      "desc_en": "FAT32 · MBR · whole disk, max. 2 TB, 512 B sectors (Yamaha recording requirement).",
+      "tip_sk": "USB je pripravené pre TF. Na nahrávanie Yamaha odporúča rýchly HDD/SSD.",
+      "tip_en": "USB is ready for TF. Yamaha recommends a fast HDD/SSD for recording."
+    },
+    {
+      "name": "Behringer X32 / Midas M32",
+      "fs": "FAT32",
+      "cluster": 0,
+      "max": 32000000000,
+      "label": "X32",
+      "desc_sk": "FAT32 · MBR · oddiel max. 32 GB. Pult nahráva po súboroch max. 2 GB.",
+      "desc_en": "FAT32 · MBR · partition max. 32 GB. The console records in files of max. 2 GB.",
+      "tip_sk": "USB je pripravené pre X32 / M32.",
+      "tip_en": "USB is ready for X32 / M32."
+    },
+    {
+      "name": "Behringer X Air / Midas MR",
+      "fs": "FAT32",
+      "cluster": 0,
+      "max": 32000000000,
+      "label": "XAIR",
+      "desc_sk": "FAT32 · MBR · oddiel max. 32 GB.",
+      "desc_en": "FAT32 · MBR · partition max. 32 GB.",
+      "tip_sk": "USB je pripravené pre X Air / MR.",
+      "tip_en": "USB is ready for X Air / MR."
+    },
+    {
+      "name": "Behringer WING",
+      "fs": "FAT32",
+      "cluster": 0,
+      "max": 32000000000,
+      "label": "WING",
+      "desc_sk": "FAT32 · MBR · oddiel max. 32 GB (Behringer odporúča USB do 32 GB).",
+      "desc_en": "FAT32 · MBR · partition max. 32 GB (Behringer recommends USB up to 32 GB).",
+      "tip_sk": "USB je pripravené pre WING. Na nahrávanie použi USB 3.0 kľúč.",
+      "tip_en": "USB is ready for WING. Use a USB 3.0 stick for recording."
+    },
+    {
+      "name": "Allen & Heath SQ / SQ+",
+      "fs": "FAT32",
+      "cluster": 64,
+      "max": 0,
+      "label": "SQ",
+      "desc_sk": "FAT32 · MBR · cluster 32 KB · celý disk 2 GB až 2 TB.",
+      "desc_en": "FAT32 · MBR · 32 KB cluster · whole disk 2 GB to 2 TB.",
+      "tip_sk": "Na pulte ešte daj Utility › USB Utility › Format – SQ si vytvorí priečinky.",
+      "tip_en": "On the console run Utility › USB Utility › Format once more – SQ creates its folders."
+    },
+    {
+      "name": "Allen & Heath Avantis",
+      "fs": "FAT32",
+      "cluster": 64,
+      "max": 0,
+      "label": "AVANTIS",
+      "desc_sk": "FAT32 · MBR · cluster 32 KB · celý disk 2 GB až 2 TB (rovnako ako dLive).",
+      "desc_en": "FAT32 · MBR · 32 KB cluster · whole disk 2 GB to 2 TB (same as dLive).",
+      "tip_sk": "Pred nahrávaním USB naformátuj aj na pulte – vytvorí si priečinky.",
+      "tip_en": "Before recording, format the USB on the console too – it creates its folders."
+    },
+    {
+      "name": "Allen & Heath dLive",
+      "fs": "FAT32",
+      "cluster": 64,
+      "max": 0,
+      "label": "DLIVE",
+      "desc_sk": "FAT32 · MBR · cluster 32 KB · celý disk 2 GB až 2 TB.",
+      "desc_en": "FAT32 · MBR · 32 KB cluster · whole disk 2 GB to 2 TB.",
+      "tip_sk": "Pred nahrávaním USB naformátuj aj na pulte – vytvorí si priečinky.",
+      "tip_en": "Before recording, format the USB on the console too – it creates its folders."
+    },
+    {
+      "name": "Allen & Heath Qu",
+      "fs": "FAT32",
+      "cluster": 64,
+      "max": 0,
+      "label": "QU",
+      "desc_sk": "FAT32 · MBR · cluster 32 KB · celý disk 2 GB až 2 TB.",
+      "desc_en": "FAT32 · MBR · 32 KB cluster · whole disk 2 GB to 2 TB.",
+      "tip_sk": "Pred nahrávaním USB naformátuj aj na pulte – vytvorí si priečinky.",
+      "tip_en": "Before recording, format the USB on the console too – it creates its folders."
+    },
+    {
+      "name": "Soundcraft Ui24R / Si",
+      "fs": "FAT32",
+      "cluster": 0,
+      "max": 32000000000,
+      "label": "SOUNDCRAFT",
+      "desc_sk": "FAT32 · MBR · oddiel max. 32 GB (Ui24R väčšie USB nečíta).",
+      "desc_en": "FAT32 · MBR · partition max. 32 GB (Ui24R does not read larger USB).",
+      "tip_sk": "USB je pripravené pre Soundcraft.",
+      "tip_en": "USB is ready for Soundcraft."
+    },
+    {
+      "name": "DiGiCo SD / Quantum",
+      "fs": "FAT32",
+      "cluster": 0,
+      "max": 0,
+      "label": "DIGICO",
+      "desc_sk": "FAT32 · MBR · celý disk (max. 2 TB). Najkompatibilnejší formát pre session súbory.",
+      "desc_en": "FAT32 · MBR · whole disk (max. 2 TB). The most compatible format for session files.",
+      "tip_sk": "USB je pripravené pre DiGiCo.",
+      "tip_en": "USB is ready for DiGiCo."
+    }
+  ]
+}
