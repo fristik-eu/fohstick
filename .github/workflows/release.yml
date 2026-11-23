@@ -12,16 +12,16 @@ permissions:
 jobs:
   mac:
     name: macOS (.dmg)
-    runs-on: macos-14
+    runs-on: macos-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
       - name: Version
         id: v
         run: |
           if [[ "$GITHUB_REF" == refs/tags/v* ]]; then echo "ver=${GITHUB_REF_NAME#v}" >> "$GITHUB_OUTPUT"; else echo "ver=" >> "$GITHUB_OUTPUT"; fi
       - name: Build
         run: bash build/build_mac.sh ${{ steps.v.outputs.ver }}
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v5
         with:
           name: mac
           path: dist/*.dmg
@@ -30,7 +30,7 @@ jobs:
     name: Windows (.zip)
     runs-on: windows-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
       - name: Version
         id: v
         shell: pwsh
@@ -43,7 +43,7 @@ jobs:
         run: |
           $v = '${{ steps.v.outputs.ver }}'
           powershell -NoProfile -ExecutionPolicy Bypass -File build/build_win.ps1 -Version $v
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v5
         with:
           name: windows
           path: dist/*.zip
@@ -54,8 +54,8 @@ jobs:
     needs: [mac, windows]
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/download-artifact@v4
+      - uses: actions/checkout@v5
+      - uses: actions/download-artifact@v5
         with:
           path: dist
       - name: Release notes
