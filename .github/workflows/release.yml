@@ -51,27 +51,47 @@ jobs:
 
   release:
     name: GitHub Release
-    if: startsWith(github.ref, 'refs/tags/v')
+    if: github.event_name != 'pull_request'
     needs: [mac, windows]
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v5
+      - name: Version & check
+        id: v
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          if [[ "$GITHUB_REF" == refs/tags/v* ]]; then VER="${GITHUB_REF_NAME#v}"; else VER="$(python3 -c 'import json;print(json.load(open("data/version.json"))["latest"])')"; fi
+          echo "ver=$VER" >> "$GITHUB_OUTPUT"
+          if gh api "repos/${GITHUB_REPOSITORY}/releases/tags/v$VER" >/dev/null 2>&1; then
+            echo "Release v$VER already exists – skipping."; echo "skip=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "skip=false" >> "$GITHUB_OUTPUT"
+          fi
       - uses: actions/download-artifact@v5
+        if: steps.v.outputs.skip == 'false'
         with:
           path: dist
       - name: Release notes
+        if: steps.v.outputs.skip == 'false'
+        env:
+          VER: ${{ steps.v.outputs.ver }}
         run: |
-          python3 - <<'PY'
-          import json, re, os
-          ver = os.environ['GITHUB_REF_NAME'].lstrip('v')
+          python3 - <<'PY2'
+          import re, os
+          ver = os.environ['VER']
           log = open('CHANGELOG.md', encoding='utf-8').read()
           m = re.search(r'## \[?' + re.escape(ver) + r'\]?.*?\n(.*?)(?=\n## |\Z)', log, re.S)
           open('notes.md', 'w', encoding='utf-8').write((m.group(1).strip() if m else 'FOHstick ' + ver) + '\n')
-          PY
+          PY2
       - uses: softprops/action-gh-release@v2
+        if: steps.v.outputs.skip == 'false'
         with:
-          name: FOHstick ${{ github.ref_name }}
+          tag_name: v${{ steps.v.outputs.ver }}
+          target_commitish: ${{ github.sha }}
+          name: FOHstick ${{ steps.v.outputs.ver }}
           body_path: notes.md
+          make_latest: true
           files: |
             dist/mac/*.dmg
             dist/windows/*.zip

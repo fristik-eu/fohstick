@@ -126,7 +126,7 @@ src/win/               Windows app (PowerShell / WinForms) + FAT32 formatter (C#
 build/                 build scripts (gen.py, build_mac.sh, build_win.ps1)
 ```
 
-Pushing a tag `vX.Y.Z` builds the macOS `.dmg` and the Windows `.zip` with GitHub Actions and publishes them as a Release. To add a console, edit `data/consoles.json` – running apps pick it up on next launch.
+**Releasing:** bump `latest` in `data/version.json`, add a section to `CHANGELOG.md` and push to `main`. GitHub Actions builds the universal macOS `.dmg` (Apple Silicon + Intel) and the Windows `.zip`, creates tag `vX.Y.Z` and publishes the Release. Running apps then show the update link. To add a console, edit `data/consoles.json` – running apps pick it up on next launch.
 
 ---
 
