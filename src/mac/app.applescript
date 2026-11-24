@@ -96,8 +96,8 @@ on replaceText(s, f, r)
 	return s
 end replaceText
 
-on reg(ctrl, k, kind)
-	set end of i18n to {ctrl, k, kind}
+on reg(ctrl, k, ctype)
+	set end of i18n to {ctrl, k, ctype}
 end reg
 
 on supportDir()
@@ -287,24 +287,26 @@ end themeChanged:
 
 on applyLang()
 	repeat with e in i18n
-		set c to item 1 of e
-		set k to item 2 of e
-		set kind to item 3 of e
-		if kind is "label" then
-			(c's setStringValue:(my tr(k)))
-		else if kind is "button" then
-			(c's setTitle:(my tr(k)))
-		else if kind is "seg" then
-			repeat with i from 1 to count of k
-				(c's setLabel:(my tr(item i of k)) forSegment:(i - 1))
-			end repeat
-		else if kind is "popup" then
-			repeat with i from 1 to count of k
-				((c's itemAtIndex:(i - 1))'s setTitle:(my tr(item i of k)))
-			end repeat
-		else if kind is "tab" then
-			(c's setLabel:(my tr(k)))
-		end if
+		try
+			set c to item 1 of e
+			set k to item 2 of e
+			set ctype to item 3 of e
+			if ctype is "label" then
+				(c's setStringValue:(my tr(k)))
+			else if ctype is "button" then
+				(c's setTitle:(my tr(k)))
+			else if ctype is "seg" then
+				repeat with i from 1 to count of k
+					(c's setLabel:(my tr(item i of k)) forSegment:(i - 1))
+				end repeat
+			else if ctype is "popup" then
+				repeat with i from 1 to count of k
+					((c's itemAtIndex:(i - 1))'s setTitle:(my tr(item i of k)))
+				end repeat
+			else if ctype is "tab" then
+				(c's setLabel:(my tr(k)))
+			end if
+		end try
 	end repeat
 	my updateList()
 	my applyMode(false)

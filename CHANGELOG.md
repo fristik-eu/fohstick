@@ -1,5 +1,9 @@
 # Changelog
 
+## [1.0.1] – 2026-11-24
+
+- **macOS:** fixed live language switching (SK / EN) – texts now update immediately.
+
 ## [1.0.0] – 2026-11-23
 
 First public release of **FOHstick**.
