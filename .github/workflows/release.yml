@@ -12,7 +12,7 @@ permissions:
 jobs:
   mac:
     name: macOS (.dmg)
-    runs-on: macos-latest
+    runs-on: macos-15-intel
     steps:
       - uses: actions/checkout@v5
       - name: Version
@@ -42,7 +42,8 @@ jobs:
         shell: powershell
         run: |
           $v = '${{ steps.v.outputs.ver }}'
-          powershell -NoProfile -ExecutionPolicy Bypass -File build/build_win.ps1 -Version $v
+          if ($v) { & ./build/build_win.ps1 -Version $v } else { & ./build/build_win.ps1 }
+          if (-not $?) { exit 1 }
       - uses: actions/upload-artifact@v5
         with:
           name: windows
