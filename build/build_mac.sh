@@ -42,7 +42,7 @@ plutil -replace LSMinimumSystemVersion -string "10.14" "$P" 2>/dev/null || pluti
 plutil -replace NSHumanReadableCopyright -string "© 2026 fristik.eu · apps@fristik.eu · https://fristik.eu" "$P"
 plutil -replace NSAppleEventsUsageDescription -string "FOHstick uses AppleScript to show dialogs." "$P" 2>/dev/null || true
 
-echo "› Architectures: $(lipo -archs "$APP/Contents/MacOS/applet" 2>/dev/null || echo '?')"
+for exe in "$APP"/Contents/MacOS/*; do echo "› Binary: $(file "$exe")"; done
 codesign --force --deep -s - "$APP"
 
 echo "› DMG…"
